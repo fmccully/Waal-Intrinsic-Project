@@ -4,11 +4,18 @@ This repository contaisn the data, code and r markdown file for the recent proje
 coordination in wandering albatrosses.
 The files included are:
 
-The original data file (waal_dataset.csv),
-the subsettted data files (incu_new2.csv, brood_new2.csv, total_df4.csv),
-the r script for the cleaning and analysis of the data (Waal model R markdown script.R),
-the r markdown script for the cleaning and analysis of the data (Waal Model script.Rmd),
-the r markdown file for the cleaning and analysis of the data (Waal Model script.html),
-the r script for the graphs (Waal graph script final. R),
-the r markdown script for the graphs (Waal graph script.Rmd) and
-the r markdown file for the graphs (Waal graph script.html)
+The original data file (waal_dataset.csv)
+
+The subsettted data files (incu_new2.csv, brood_new2.csv, total_df4.csv)
+
+The r script for the cleaning and analysis of the data (Waal model R markdown script.R)
+
+The r markdown script for the cleaning and analysis of the data (Waal Model script.Rmd)
+
+The r markdown file for the cleaning and analysis of the data (Waal Model script.html)
+
+The r script for the graphs (Waal graph script final. R)
+
+The r markdown script for the graphs (Waal graph script.Rmd)
+
+The r markdown file for the graphs (Waal graph script.html)
