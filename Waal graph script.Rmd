@@ -1,0 +1,134 @@
+---
+title: "Waal Intrinsic Variables Project Graph Script"
+author: "Fionnuala R McCully"
+date: "25/08/2021"
+output: 
+  html_document:
+   toc : true
+   toc_float : true
+   theme: yeti
+   highlight: haddock
+---
+
+```{r, echo=FALSE}
+knitr::read_chunk(here::here ("WAAL Graph R markdown script.R"))
+
+```
+## Wandering Albatross Graph Script
+
+This R Markdown document details the code used to generate the graphs for a study on the impact of intrinsic variables on parental care coordination in wandering albatrosses. It covers the creation of new models suitable for the creation of graphs, the extraction of regression lines from model averaged objects and the creation of the graphs used to display the data.The companion piece to this script is the 'Waal Model Script.html' which described the full analysis of this project. This should be consulted before consulting the current document as some knowledge of context is assumed.   
+
+## Data Setup
+
+The following code describes the packages used to process the data and uploads the original data files. Three files are provided: `total_df4` which is the full data set, `incu_new2` which features only the incubation data and `brood_new2` which contains only brooding data. 
+
+```{r graph-setup, message=FALSE, warning=FALSE, results = 'hide', echo = TRUE}
+
+```
+
+## Creating new models
+
+The linear mixed models and information theory used during analysis are run again, this time without scaled vraiables to make the resulting graphs more intuative. The results of the following code are hidden for brevity however consult 'Waal Model Script.html' for a more detailed account.   
+
+First the incubation model is rerun. 
+ 
+```{r incu-model, message=FALSE, warning=FALSE, results = 'hide'}
+
+```
+
+Followed by information theory. the target object of this exercise is `modavm1_incur` which contains the model averaged coefficients which will be used to plot the relevant regression lines. 
+
+```{r incu-IT, message=FALSE, warning=FALSE, results = 'hide'}
+
+```
+
+The process is repeated for the brooding model.
+
+```{r brood-model, message=FALSE, warning=FALSE, results = 'hide'}
+
+```
+
+In this case, the object `modavm1_broodr` will be used in graph creation.
+
+```{r brood-IT, message=FALSE, warning=FALSE, results = 'hide'}
+
+```
+
+The final model averaged objects can be viewed below:
+
+```{r mod-est, message=FALSE, warning=FALSE}
+
+```
+
+## Coordination Graph
+
+This graph demonstrates the difference in coordination strength in incubation compared to brooding. This is illustrated by plotting the correlation between individual trip duration (response variable) and their partner's deviation from average trip duration. The regression lines from both models are extracted to help visualize coordination strength. The stronger the positive slope, the stronger the coordination at the population level.
+
+the setup for this graph is contained within the following section of code. This includes extracting the regression line for the correct variable (partner deviation from average trip duration is labeled as `ppb_ave_diff` in the model).  
+
+```{r co-setup, message=FALSE, warning=FALSE, error= FALSE}
+
+```
+
+The response variable ( individual trip duration or `no_hours_sqrt` in the model) was square root transformed when the analysis was completed. this must be back transformed for the graphs so that the original data can be used and the Y axis units are intuitive. 
+
+```{r co-sq-root, message=FALSE, warning=FALSE}
+
+```
+Changes are also made to the original data set so that incubation and brooding appear on the graph in a logical order. This action will be finalized la little later in the code.
+
+```{r order-incu, message=FALSE, warning=FALSE}
+
+```
+
+The two breeding stage subsets are combined into a dingle data frame so that `facet_wrap` can be used in `ggplot2` to show incubation and brooding side by side. Final adjustments are made so that so that incubation and brooding appear in an intuitive order with correct labels on the final graph.  
+
+```{r co-new-df, message=FALSE, warning=FALSE}
+
+```
+
+The graph can then be completed in `ggplot2`.
+
+```{r co-graph-ggplot, message=FALSE, warning=FALSE}
+
+```
+
+## Focal and Partner Boldness in Brooding Graph
+
+This graph demonstrates that both focal bird boldness (`pers`) and partner bird boldness (`p_pers`) impact individual foraging trip duration during brooding. This graph only requires the brooding data subset (`brood_new2`). It features individual trip duration on the Y axis and boldness score on the x axis. Although the variable `pers` is included in the graph setup, it is used only to set the scale for the x axis, and once the data are hidden, the more generic 'boldness score' label can be applied. 
+
+In the setup, the regression lines of both `pers` and `p_pers` are extracted so that they might be compared on the graph.
+
+```{r pers-setup, message=FALSE, warning=FALSE}
+
+```
+
+The response variable is back-transformed, and the confidence intervals are similarly adjusted so they can be used on the graph in the correct scale. 
+```{r pers-sq-root, message=FALSE, warning=FALSE}
+
+```
+
+The graph is then created in ggplot. Note how the data points are hidden to legitimise the 'boldness score' x axis label and the request for specific x axis increments which may generate a harmless warning. 
+
+```{r pers-graph-code, message=FALSE, warning=FALSE}
+
+```
+
+## Partner Age in Incubation Graph 
+
+The final graph displays the weak quadratic relationship between partner age and individual foraging trip duration during incubation. Only `incu_new2` is needed for this graph as it only concerns the incubation data. individual trip duration is once again featured on the Y axis while partner age is on the x axis. the variable extracted from the model is `p_age_sq`; the quadratic term representing partner age in the original model. Once again the data points will be hidden in the final graph. 
+
+```{r age-setup, message=FALSE, warning=FALSE}
+
+```
+
+The response variable is back-transformed and the square root of the predictor is calculated so they are on intuative scales
+```{r un-sq-age, message=FALSE, warning=FALSE}
+
+```
+
+Finally, the graph is created. Note the hidden data points and he request for specific x axis increments which may generate a harmless warning. 
+
+```{r age-graph-code, message=FALSE, warning=FALSE}
+
+```
