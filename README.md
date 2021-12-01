@@ -12,7 +12,7 @@ The r script for the cleaning and analysis of the data (Waal model R markdown sc
 
 The r markdown script for the cleaning and analysis of the data (Waal Model script.Rmd)
 
-The r markdown file for the cleaning and analysis of the data (Waal Model script.zip>Waal Model script.html). 
+The r markdown file for the cleaning and analysis of the data (Waal Intrinsic Variables and Parental Care Coordination Model Script.pdf). 
 
 The r script for the graphs (Waal graph R markdown script. R)
 
