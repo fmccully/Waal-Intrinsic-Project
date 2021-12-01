@@ -1,6 +1,6 @@
 # Waal-Intrinsic-Project
 # Code and data for Waal Intrinsic Coordination Study 
-This repository contaisn the data, code and r markdown file for the recent project on intrinsic variables and their effects on parental care 
+This repository contaisn the data, code and r markdown file for the project on intrinsic variables and their effects on parental care 
 coordination in wandering albatrosses.
 The files included are:
 
