@@ -6,7 +6,7 @@ The files included are:
 
 The original data file (waal_dataset.csv)
 
-The subsettted data files (incu_new2.csv, brood_new2.csv, total_df4.csv)
+The subsettted data files ready for analysis (incu_new2.csv, brood_new2.csv, total_df4.csv)
 
 The r script for the cleaning and analysis of the data (Waal model R markdown script.R)
 
