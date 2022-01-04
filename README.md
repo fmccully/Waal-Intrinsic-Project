@@ -83,29 +83,53 @@ Brooding: 611
 Variable List: 
 X: row number
 tag: focal bird ID number (numbered leg ring) 
+
 p_tag: ID number (numbered leg ring) of focal bird’s partner
+
 sex: sex of focal bird (M/F)
+
 partner_type: if focal bird is logger (i.e. carried a tag) or a partner (did not carry a tag). Partner bird trip durations will be estimated from logger bird data. 
+
 Age: age of focal bird. Unit = years
+
 p_age: age of focal bird’s partner. Unit = years 
+
 pers: Focal bird’s boldness score. Unit = unspecified scale generated from a generalized linear model. Higher scores = increased boldness.
+
 p_pers: Boldness score of focal bird’s partner. Unit = unspecified scale generated from a generalized linear model. Higher scores = increased boldness. 
+
 pair_ID: indexing variable, combination of ‘tag’ and ‘p_tag’ to identify observations related to individual pairs across whole dataset
+
 cycle: breeding year. As one breeding cycle lasts 12 months Nov-Nov, the December of each breeding year is labelled as belonging to the next calendar year. I.e. Dec 2008 will be labelled in ‘cycle’ as 2009. 
+
 cycle_tag: indexing variable, combination of ‘tag’ and ‘cycle’ to identify observations relating to specific individuals in specific years
+
 cycle_pair: indexing variable, combination of ‘pair_ID’ and ‘cycle’ to identify observations relating to specific pairs in specific years
+
 new_part: partnership history. Binary variable either 1 = new partnership that cycle or 0= established pair which had bred together for at least one year prior to the observed trip duration
+
 NumDays: control variable for the passage of time throughout the breeding season. Number of days since start of breeding season (16th Dec) each year. Unit = days
+
 day_date: calendar date (day only) at start time of trip duration
+
 breed_act: calendar month at start time of trip duration
+
 breed_stage: either incubation (incu) (16th Dec until that pair showed signs of reduced trip durations in mid-march) or brooding(brood) (mid-march – 11th April). Used to separate breeding stage subsets.
+
 start_date_time: date and time at the start of the focal bird’s foraging trip
+
 start_numeric_date_time: date and time at the start of the focal bird’s foraging trip in numeric form
+
 end_date_time: date and time at the end of the focal bird’s foraging trip
+
 end_numeric_date_time: date and time at the end of the focal bird’s foraging trip in numeric form
+
 timeduration: original variable representing length of foraging tip (trip duration) of focal bird. Unit = seconds
+
 no_hours: principle response variable in the study. Length of foraging tip (trip duration) of focal bird. Unit = hours 
+
 no_days: Length of foraging tip (trip duration) of focal bird. Unit = days 
+
 part_prev_bout: Partner’s previous trip duration. the trip duration of each bird's partner immediately prior to their own foraging trip. Required to create measures of coordination for further analysis. Unit = hours
 
 
