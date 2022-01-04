@@ -81,7 +81,9 @@ Incubation: 260
 Brooding: 611
 
 Variable List: 
-X: row number
+
+blank/X: row number
+
 tag: focal bird ID number (numbered leg ring) 
 
 p_tag: ID number (numbered leg ring) of focal bird’s partner
