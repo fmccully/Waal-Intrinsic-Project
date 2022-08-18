@@ -21,9 +21,11 @@ DATA & FILE OVERVIEW
 File List: 
 The original data file (anon_waal_dataset3.csv)
 
-The r script for the cleaning and analysis of the data (anon_Waal model R markdown script.R)
+The r script for the cleaning and analysis of the data (NEW anon WAAL model R markdown script.R)
 
-The r markdown file for the cleaning and analysis of the data (anon_Waal Intrinsic Variables and Parental Care Coordination Model Script.pdf). 
+The r markdown file used to generate the pdf guide (New anon Waal Model script.Rmd)
+
+The r markdown PDF for the cleaning and analysis of the data (Waal Intrinsic Variables and Parental Care Coordination Rmarkdown.pdf) 
 
 
 METHODOLOGICAL INFORMATION
